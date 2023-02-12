@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { GraphQLClient, gql } from "graphql-request";
+import BlogCard from "@/components/BlogCard/BlogCard";
 
 const graphCMS = new GraphQLClient(
   "https://api-eu-west-2.hygraph.com/v2/cle1jmfnd3mz501rra1gwhaly/master"
@@ -16,6 +17,12 @@ const query = gql`
       }
       content {
         html
+      }
+      author {
+        name
+        avatar {
+          url
+        }
       }
     }
   }
@@ -43,6 +50,9 @@ export default function Home({ posts }) {
       <main className={styles.main}>
         yo
         {JSON.stringify(posts)}
+        {posts.map(() => {
+          return <BlogCard />;
+        })}
       </main>
     </>
   );
