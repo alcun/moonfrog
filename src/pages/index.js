@@ -48,10 +48,11 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        yo
-        {JSON.stringify(posts)}
-        {posts.map(() => {
-          return <BlogCard />;
+       
+        
+        {/* {JSON.stringify(posts)} */}
+        {posts.map((post, i) => {
+          return <BlogCard postTitle={post.title}  />;
         })}
       </main>
     </>

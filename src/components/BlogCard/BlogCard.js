@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const BlogCard = () => {
-  return (
-    <div>BlogCard</div>
-  )
-}
+const BlogCard = ({postTitle}) => {
+  return <div>{postTitle}</div>;
+};
 
-export default BlogCard
+export default BlogCard;
