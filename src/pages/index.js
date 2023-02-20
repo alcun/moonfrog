@@ -14,6 +14,7 @@ const query = gql`
       datePublished
       coverPhoto {
         id
+        url
       }
       content {
         html
@@ -24,6 +25,7 @@ const query = gql`
           url
         }
       }
+      slug
     }
   }
 `;
@@ -48,11 +50,9 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-       
-        
         {/* {JSON.stringify(posts)} */}
         {posts.map((post, i) => {
-          return <BlogCard postTitle={post.title}  />;
+          return <BlogCard postTitle={post.title} />;
         })}
       </main>
     </>
