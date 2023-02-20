@@ -52,7 +52,16 @@ export default function Home({ posts }) {
       <main className={styles.main}>
         {/* {JSON.stringify(posts)} */}
         {posts.map((post, i) => {
-          return <BlogCard postTitle={post.title} />;
+          return (
+            <BlogCard
+              key={post.id}
+              author={post.author}
+              coverPhoto={post.coverPhoto}
+              postTitle={post.title}
+              datePublished={post.datePublished}
+              slug={post.slug}
+            />
+          );
         })}
       </main>
     </>
