@@ -1,5 +1,6 @@
 import styles from "@/styles/Slug.module.css";
 import { GraphQLClient, gql } from "graphql-request";
+import Image from "next/image";
 
 const graphCMS = new GraphQLClient(
   "https://api-eu-west-2.hygraph.com/v2/cle1jmfnd3mz501rra1gwhaly/master"
@@ -10,7 +11,24 @@ export async function getStaticProps({ params }) {
     `
       query Post($slug: String!) {
         post(where: { slug: $slug }) {
-          id
+            title
+            datePublished
+            id
+            coverPhoto {
+              id
+              url
+            }
+            content {
+              html
+            }
+            author {
+              name
+              avatar {
+                url
+              }
+            }
+            slug
+          
         }
       }
     `,
@@ -31,7 +49,7 @@ export async function getStaticPaths() {
       {
         posts {
           slug
-          id
+          
         }
       }
     `);
@@ -45,7 +63,12 @@ export async function getStaticPaths() {
 }
 
 const Article = ({ post }) => {
-  return <div>{JSON.stringify(post)}</div>;
+  return (
+    <div className={styles.article}>
+      <Image width={500} height={500} src={post.coverPhoto.url} />
+      {JSON.stringify(post)}
+    </div>
+  );
 };
 
 export default Article;
