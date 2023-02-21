@@ -8,18 +8,19 @@ const graphCMS = new GraphQLClient(
   "https://api-eu-west-2.hygraph.com/v2/cle1jmfnd3mz501rra1gwhaly/master"
 );
 
-const query = gql`
+const QUERY = gql`
   {
     posts {
       title
       datePublished
       id
+
       coverPhoto {
         id
         url
       }
       content {
-        html
+        text
       }
       author {
         name
@@ -33,7 +34,7 @@ const query = gql`
 `;
 
 export async function getStaticProps() {
-  const { posts } = await graphCMS.request(query);
+  const { posts } = await graphCMS.request(QUERY);
   return {
     props: {
       posts,
@@ -52,22 +53,22 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <Link href='/'><h1>Moonfrog presents</h1></Link>
-
         {/* {JSON.stringify(posts)} */}
-        <div className="styles.cardGrid">
-        {posts.map((post, i) => {
-          return (
-            <BlogCard
-              key={post.id}
-              author={post.author}
-              coverPhoto={post.coverPhoto}
-              postTitle={post.title}
-              datePublished={post.datePublished}
-              slug={post.slug}
-            />
-          );
-        })}</div>
+        <div className={styles.cardGrid}>
+          {posts.map((post, i) => {
+            return (
+              <BlogCard
+                key={post.id}
+                author={post.author}
+                coverPhoto={post.coverPhoto}
+                postTitle={post.title}
+                datePublished={post.datePublished}
+                postText={post.content.text}
+                slug={post.slug}
+              />
+            );
+          })}
+        </div>
       </main>
     </>
   );
