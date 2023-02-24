@@ -63,10 +63,11 @@ export async function getStaticPaths() {
 }
 
 const Article = ({ post }) => {
+  console.log(post);
   return (
     <div className={styles.article}>
       <Image width={500} height={500} src={post.coverPhoto.url} />
-      {JSON.stringify(post)}
+      <div dangerouslySetInnerHTML={{ __html: post.content.html }}></div>
     </div>
   );
 };
