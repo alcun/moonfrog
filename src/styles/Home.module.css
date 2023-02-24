@@ -57,6 +57,17 @@
   margin-bottom: 2rem;
 }
 
+.card__lower__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__lower__info__author {
+  display: flex;
+}
+
+
 .card__lower__text {
   height: 3rem;
   white-space: nowrap;
