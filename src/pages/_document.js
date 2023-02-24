@@ -6,9 +6,6 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        <Link href="/">
-          <h1>Moonfrog presents</h1>
-        </Link>
         <Main />
         <NextScript />
       </body>
