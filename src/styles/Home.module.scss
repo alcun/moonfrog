@@ -5,76 +5,72 @@
   align-items: center;
   /* padding: 6rem; */
   /* min-height: 100vh;  */
-}
 
-.cardGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* grid-template-rows: 1fr 1fr 1fr;  */
-  gap: 2rem;
-  padding: 2rem;
-  /* grid-template-areas: 
+  .cardGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr;  */
+    gap: 2rem;
+    padding: 2rem;
+    /* grid-template-areas: 
     ". . ."
     ". . ."
     ". . .";  */
-}
 
-.card {
-  display: flex;
-  flex-direction: column;
-  border: 5px solid grey;
-  border-radius: 10px;
-  min-width: 4rem;
-  width: 100%;
-  height: 500px;
-  position: relative;
-  /* padding: 1rem; */
-  /* margin: 6rem; */
-}
+    .card {
+      display: flex;
+      flex-direction: column;
+      border: 5px solid grey;
+      border-radius: 10px;
+      min-width: 4rem;
+      width: 100%;
+      height: 500px;
+      position: relative;
+      /* padding: 1rem; */
+      /* margin: 6rem; */
 
-.card__link {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
+      .card__link {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        img {
+          border-radius: 10px;
+          display: block;
+          aspect-ratio: 1;
+          object-fit: cover;
+          height: 100%;
+        }
+      }
 
-.card__link img {
-  border-radius: 10px;
-  display: block;
-  aspect-ratio: 1;
-  object-fit: cover;
-  height: 100%;
-}
+      .card__lower {
+        padding: 1rem;
+        display: grid;
+        gap: 1rem;
+        .card__lower__title {
+          height: 3rem;
+          margin-bottom: 2rem;
+        }
 
-.card__lower {
-  padding: 1rem;
-  display: grid;
-  gap: 1rem;
-}
+        .card__lower__info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .card__lower__info__author {
+            display: flex;
+          }
+        }
 
-.card__lower__title {
-  height: 3rem;
-  margin-bottom: 2rem;
-}
-
-.card__lower__info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.card__lower__info__author {
-  display: flex;
-}
-
-
-.card__lower__text {
-  height: 3rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /* padding: 1rem;
+        .card__lower__text {
+          height: 3rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          /* padding: 1rem;
   display: grid;
   gap: 1rem;
   max-height: 200px; */
+        }
+      }
+    }
+  }
 }
