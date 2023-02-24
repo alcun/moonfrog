@@ -10,10 +10,8 @@ const BlogCard = ({ postTitle, coverPhoto, postText, slug }) => {
         <Image fill src={coverPhoto.url} />
       </Link>
       <div className={styles.card__lower}>
-        <div>
-          <h1> {postTitle}</h1>
-        </div>
-        <div> {postText}</div>
+        <h1 className={styles.card__lower__title}> {postTitle}</h1>
+        <span className={styles.card__lower__text}>{postText}</span>
       </div>
     </div>
   );
