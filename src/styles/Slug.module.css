@@ -1,6 +1,8 @@
 .article {
   /* max-width: 60vw; */
   display: grid;
+  gap: 2rem;
+  padding: 2rem;
   /* grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
@@ -8,4 +10,10 @@
     ". . ."
     ". . ."
     ". . ."; */
+}
+
+.article__content > *{
+/* padding-top: 1rem; */
+padding-bottom: 1rem;
+border-radius: 10px;
 }
