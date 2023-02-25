@@ -16,13 +16,22 @@ const Footer = () => {
       <ul className={styles.footer__links}>
         <IconContext.Provider value={{ className: "social-icons" }}>
           <li>
-            <RxCalendar />
+            <a href="https://www.fatsoma.com/p/moonfrog">
+              {" "}
+              <RxCalendar />
+            </a>
           </li>
           <li>
-            <RiFacebookCircleLine />
+            <a href="https://www.facebook.com/Moonfrogpresents/">
+              {" "}
+              <RiFacebookCircleLine />
+            </a>
           </li>
           <li>
-            <RiInstagramLine />
+            <a href="https://www.instagram.com/moonfrogpresents/">
+              {" "}
+              <RiInstagramLine />
+            </a>
           </li>
           <li>
             <RiMailSendLine />
