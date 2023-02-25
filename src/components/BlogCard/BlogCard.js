@@ -18,6 +18,10 @@ const BlogCard = ({
       </Link>
       <div className={styles.card__lower}>
         <h1 className={styles.card__lower__title}> {postTitle}</h1>
+       
+        <span className={styles.card__lower__text}>
+          {postText.replaceAll("\\n", " ")}
+        </span>
         <div className={styles.card__lower__info}>
           <div className={styles.card__lower__info__author}>
             <div>
@@ -27,9 +31,6 @@ const BlogCard = ({
           </div>
           <div className={styles.card__lower__info__date}>{datePublished}</div>
         </div>
-        <span className={styles.card__lower__text}>
-          {postText.replaceAll("\\n", " ")}
-        </span>
       </div>
     </div>
   );

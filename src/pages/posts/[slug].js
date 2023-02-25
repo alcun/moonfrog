@@ -64,7 +64,7 @@ export async function getStaticPaths() {
 }
 
 const Article = ({ post }) => {
-  const pageTitle = post.title.toString() + ' - Moonfrog Presents'
+  const pageTitle = post.title.toString() + ' - Moonfrog'
   return (
     <>
       <Head>

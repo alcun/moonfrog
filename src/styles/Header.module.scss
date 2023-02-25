@@ -1,4 +1,32 @@
-.header{
-    padding: 1rem;
-    
+@import "mixins";
+
+.header {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include phone-and-tablet {
+    flex-direction: column;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    list-style: none;
+    font-size: 5rem;
+    font-family: var(--fraktur-font);
+
+    @include phone-and-tablet {
+      flex-direction: column;
+    }
+
+    li {
+      margin-left: 3rem;
+      transition: all ease 0.5s;
+      &:hover {
+        cursor: pointer;
+        color: red;
+      }
+    }
+  }
 }
