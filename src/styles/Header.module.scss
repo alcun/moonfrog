@@ -23,6 +23,12 @@
     li {
       margin-left: 3rem;
       transition: all ease 0.5s;
+      @include phone-and-tablet {
+        margin-left: 0;
+        margin-top: 1rem;
+        text-align: center;
+      }
+
       &:hover {
         cursor: pointer;
         color: red;

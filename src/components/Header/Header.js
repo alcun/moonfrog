@@ -11,7 +11,7 @@ const Header = () => {
       </Link>
 
       <ul>
-        <li>words</li>
+        {/* <li>words</li> */}
 
         <li>nights</li>
         <li>about</li>

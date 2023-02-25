@@ -1,3 +1,5 @@
+@import "mixins";
+
 .article {
   /* max-width: 60vw; */
   display: grid;
@@ -14,5 +16,17 @@
     /* padding-top: 1rem; */
     padding-bottom: 1rem;
     border-radius: 10px;
+
+    @include phone-and-tablet {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .article__content {
+    img {
+      max-width: 100%;
+    }
   }
 }

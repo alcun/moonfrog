@@ -1,20 +1,31 @@
-.footer{
-    padding: 3rem;
+@import "mixins";
+
+.footer {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include phone-and-tablet {
+    flex-direction: column;
+  }
+  .footer__title {
+    h1 {
+      font-size: 5rem;
+      font-family: var(--fraktur-font);
+    }
+    @include phone-and-tablet {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .footer__links {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    list-style: none;
 
-    .footer__title{
-        h1{
-        font-size: 5rem;
-        font-family: var(--fraktur-font);
-
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    }
-
-    .footer__links{
-            display: flex;
-            list-style: none;
-        
-    }
+  }
 }
