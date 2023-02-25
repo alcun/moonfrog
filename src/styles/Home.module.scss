@@ -69,9 +69,15 @@
           display: flex;
           align-items: center;
           // justify-content: space-between;
+          & > * {
+            margin-right: 1rem;
+          }
           .card__lower__info__author {
             display: flex;
             align-items: center;
+            img{
+              margin-right: 1rem;
+            }
           }
         }
 

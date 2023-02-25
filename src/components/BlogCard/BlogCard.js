@@ -25,7 +25,7 @@ const BlogCard = ({
         <div className={styles.card__lower__info}>
           <div className={styles.card__lower__info__author}>
             <div>
-              <Image width={20} height={20} src={author.avatar.url} />
+              <Image width={40} height={40} src={author.avatar.url} />
             </div>
             <div>{author.name}</div>
           </div>
