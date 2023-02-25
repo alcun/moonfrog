@@ -2,9 +2,15 @@
 
 .article {
   /* max-width: 60vw; */
-  display: grid;
-  gap: 2rem;
+
   padding: 3rem;
+  max-width: 100vw;
+  img {
+    width: 100%;
+  }
+  @include phone-and-tablet {
+    padding: 1rem;
+  }
   /* grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
@@ -16,6 +22,7 @@
     /* padding-top: 1rem; */
     padding-bottom: 1rem;
     border-radius: 10px;
+    width: 100%;
 
     @include phone-and-tablet {
       img {

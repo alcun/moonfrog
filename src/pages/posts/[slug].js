@@ -74,7 +74,8 @@ const Article = ({ post }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.article}>
-        <Image width={500} height={500} src={post.coverPhoto.url} />
+        {/* <Image width={500} height={500} src={post.coverPhoto.url} /> */}
+        <img src={post.coverPhoto.url}/>
         <div
           className={styles.article__content}
           dangerouslySetInnerHTML={{ __html: post.content.html }}
