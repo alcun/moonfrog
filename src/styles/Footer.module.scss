@@ -12,6 +12,9 @@
     h1 {
       font-size: 5rem;
       font-family: var(--fraktur-font);
+      @include phone-and-tablet {
+        font-size: 4.5rem;
+      }
     }
     @include phone-and-tablet {
       margin-bottom: 2rem;
