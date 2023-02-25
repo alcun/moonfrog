@@ -13,8 +13,8 @@ const Header = () => {
       <ul>
         {/* <li>words</li> */}
 
-        <li>nights</li>
-        <li>about</li>
+        <Link href={'/nights'}><li>nights</li></Link>
+        <Link href={'/about'}><li>about</li></Link>
       </ul>
     </div>
   );
