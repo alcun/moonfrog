@@ -18,6 +18,10 @@
     ". . ."
     ". . ."
     ". . ."; */
+    .article__content{
+      min-height: 100vh;
+
+    }
   .article__content > * {
     /* padding-top: 1rem; */
     padding-bottom: 1rem;

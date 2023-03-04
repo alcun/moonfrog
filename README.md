@@ -8,8 +8,8 @@
 ## TO DO
 ### Components
 
-- Header
-- Footer
+- Header - links
+- Footer 
 - Maybe about and gallery page
 
 ### CSS / Design
@@ -25,4 +25,9 @@
 
 ### Hosting
 
-- Deploy to vercel
+- Deploy to vercel - done
+- domain + email
+
+
+### More
+- show user how to make hygraph posts 
